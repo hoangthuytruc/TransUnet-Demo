@@ -2,7 +2,8 @@ import argparse
 import logging
 import random
 import sys, os
-sys.path.append(os.getcwd())
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 import time
 import numpy as np
 import torch
