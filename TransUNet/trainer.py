@@ -3,6 +3,7 @@ import logging
 import os
 import random
 import sys
+sys.path.append("/kaggle/working/TransUnet-Demo")
 import time
 import numpy as np
 import torch
@@ -15,7 +16,6 @@ from tqdm import tqdm
 from utils import DiceLoss
 from torchvision import transforms
 from datasets.dataset_synapse import Synapse_dataset, RandomGenerator
-sys.path.append("/kaggle/working/TransUnet-Demo")
 
 def trainer_synapse(args, model, snapshot_path):
     logging.basicConfig(filename=snapshot_path + "/log.txt", level=logging.INFO,
