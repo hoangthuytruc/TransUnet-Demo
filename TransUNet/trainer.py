@@ -1,9 +1,8 @@
 import argparse
 import logging
-import os
 import random
-import sys
-sys.path.append("/kaggle/working/TransUnet-Demo")
+import sys, os
+sys.path.append(os.getcwd())
 import time
 import numpy as np
 import torch
