@@ -13,12 +13,11 @@ from datasets.dataset_synapse import Synapse_dataset
 from utils import test_single_volume
 from networks.vit_seg_modeling import VisionTransformer as ViT_seg
 from networks.vit_seg_modeling import CONFIGS as CONFIGS_ViT_seg
-
 sys.path.append("/kaggle/working/TransUnet-Demo/TransUNet")
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--volume_path', type=str,
-                    default='../data/Synapse/test_vol_h5', help='root dir for validation volume data')  # for acdc volume_path=root_dir
+                    default='/kaggle/input/synapse/Synapse/test_vol_h5', help='root dir for validation volume data')  # for acdc volume_path=root_dir
 parser.add_argument('--dataset', type=str,
                     default='Synapse', help='experiment_name')
 parser.add_argument('--num_classes', type=int,
@@ -82,7 +81,7 @@ if __name__ == "__main__":
     dataset_config = {
         'Synapse': {
             'Dataset': Synapse_dataset,
-            'volume_path': '../data/Synapse/test_vol_h5',
+            'volume_path': '/kaggle/input/synapse/Synapse/test_vol_h5',
             'list_dir': './lists/lists_Synapse',
             'num_classes': 9,
             'z_spacing': 1,
