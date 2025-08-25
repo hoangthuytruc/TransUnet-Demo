@@ -14,8 +14,8 @@ from torch.utils.data import DataLoader
 from tqdm import tqdm
 from utils import DiceLoss
 from torchvision import transforms
-from dataset_synapse import Synapse_dataset, RandomGenerator
-sys.path.append("/kaggle/working/TransUnet-Demo/TransUNet")
+from datasets.dataset_synapse import Synapse_dataset, RandomGenerator
+sys.path.append("/kaggle/working/TransUnet-Demo")
 
 def trainer_synapse(args, model, snapshot_path):
     logging.basicConfig(filename=snapshot_path + "/log.txt", level=logging.INFO,

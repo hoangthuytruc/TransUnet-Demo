@@ -9,11 +9,11 @@ import torch.backends.cudnn as cudnn
 import torch.nn as nn
 from torch.utils.data import DataLoader
 from tqdm import tqdm
-from dataset_synapse import Synapse_dataset
 from utils import test_single_volume
 from networks.vit_seg_modeling import VisionTransformer as ViT_seg
 from networks.vit_seg_modeling import CONFIGS as CONFIGS_ViT_seg
-sys.path.append("/kaggle/working/TransUnet-Demo/TransUNet")
+from datasets.dataset_synapse import Synapse_dataset, RandomGenerator
+sys.path.append("/kaggle/working/TransUnet-Demo")
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--volume_path', type=str,
